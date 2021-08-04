@@ -4,7 +4,7 @@
  * https://github.com/r3sist/device
  */
 
-namespace resist\Twig;
+namespace resist\Device;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
