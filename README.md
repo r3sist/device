@@ -13,6 +13,7 @@ Register optinal Twig extension:
 ```yaml
 # config/service.yaml
 
+resist\Device\Device:
 resist\Device\TwigDevice:
         tags: [ 'twig.extension' ]
 ```        
