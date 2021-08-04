@@ -24,7 +24,7 @@ final class TwigDevice extends AbstractExtension
         return [
             new TwigFunction('is_mobile', static function() use ($deviceService): bool
             {
-                return deviceService->isMobile();
+                return $deviceService->isMobile();
             }),
         ];
     }
