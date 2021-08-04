@@ -1,0 +1,13 @@
+{
+    "name": "resist/device",
+    "description": "Simple mobile detector",
+    "license": "MIT",
+    "type": "library",
+    "minimum-stability": "dev",
+    "autoload": {
+        "classmap": ["src"]
+    },
+    "require": {
+        "php": ">=8.0"
+    }
+}
