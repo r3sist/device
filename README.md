@@ -8,7 +8,9 @@ Install:
 
 `composer require resist/device`
 
-Register optinal Twig extension:
+Usage: use as injected service.
+
+Register optinal Twig `is_mobile()` function as extension :
 
 ```yaml
 # config/service.yaml
@@ -18,6 +20,3 @@ resist\Device\TwigDevice:
         tags: [ 'twig.extension' ]
 ```        
 
-Usage:
-
-Use as injected service.
