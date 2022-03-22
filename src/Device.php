@@ -31,15 +31,12 @@ class Device
         $request = $requestStack->getCurrentRequest()??(new Request());
         array_change_key_case($this->headers = $request->headers->all());
     }
-
-    /**
-     * @see agent() method of https://github.com/bcosca/fatfree/blob/master/lib/base.php
-     */
+    
     private function getAgent():string
     {
-        return $this->headers['x-operamini-phone-ua']
-            ?? ($this->headers['x-skyfire-phone']
-                ?? ($this->headers['user-agent']
+        return $this->headers['x-operamini-phone-ua'][0]
+            ?? ($this->headers['x-skyfire-phone'][0]
+                ?? ($this->headers['user-agent'][0]
                     ?? ''));
     }
 
