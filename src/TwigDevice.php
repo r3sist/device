@@ -12,7 +12,7 @@ use Twig\TwigFunction;
 final class TwigDevice extends AbstractExtension
 {
     public function __construct(
-        private \resist\Device\Device $deviceService,
+        private Device $deviceService,
     )
     {
     }

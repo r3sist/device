@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
  */
 class Device
 {
-    const UA_MOBILE = 'android|blackberry|phone|ipod|palm|windows\s+ce';
+    public const UA_MOBILE = 'android|blackberry|phone|ipod|palm|windows\s+ce';
 //    const UA_DESKTOP = 'bsd|linux|os\s+[x9]|solaris|windows';
 //    const UA_BOT = 'bot|crawl|slurp|spider';
 
@@ -29,8 +29,7 @@ class Device
     )
     {
         $request = $requestStack->getCurrentRequest()??(new Request());
-        $this->headers = $request->headers->all();
-
+        array_change_key_case($this->headers = $request->headers->all());
     }
 
     /**
@@ -38,9 +37,9 @@ class Device
      */
     private function getAgent():string
     {
-        return $this->headers['X-Operamini-Phone-UA']
-            ?? ($this->headers['X-Skyfire-Phone']
-                ?? ($this->headers['User-Agent']
+        return $this->headers['x-operamini-phone-ua']
+            ?? ($this->headers['x-skyfire-phone']
+                ?? ($this->headers['user-agent']
                     ?? ''));
     }
 
