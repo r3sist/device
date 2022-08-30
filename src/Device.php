@@ -31,7 +31,7 @@ class Device
         $request = $requestStack->getCurrentRequest()??(new Request());
         array_change_key_case($this->headers = $request->headers->all());
     }
-    
+
     private function getAgent():string
     {
         return $this->headers['x-operamini-phone-ua'][0]
