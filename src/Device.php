@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
  */
 class Device
 {
-    public const UA_MOBILE = 'android|blackberry|phone|ipod|palm|windows\s+ce';
+    public const UA_MOBILE = 'mobi|android|blackberry|phone|ipod|palm|windows\s+ce';
 //    const UA_DESKTOP = 'bsd|linux|os\s+[x9]|solaris|windows';
 //    const UA_BOT = 'bot|crawl|slurp|spider';
 
